@@ -6,3 +6,91 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  margin: auto;
+}
+
+body {
+  background-image: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 26px;
+
+}
+
+.users-choice p {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 27px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 584px;
+  padding: 20px 30px;
+  margin-bottom: 106px;
+  border-radius: 10px;
+}
+
+/* # mantra {
+  margin-left: 10px!important;
+}
+# affirmation {
+
+} */
+span {
+  font-style: italic;s
+  font-size: 17px;
+}
+
+button {
+  /* flex-direction: column; */
+  background-color: #134d71;
+  color: #ffffff;
+  width: 199px;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+
+.message-box {
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+  width: 860px;
+  padding: 43px;
+  background-color: #ffffff;
+  margin-bottom: 120px;
+  border-radius: 10px;
+
+}
