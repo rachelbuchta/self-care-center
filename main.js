@@ -1,7 +1,9 @@
 // query selectors
 var receiveMessageButton = document.querySelector("button");
 var radioButtons = document.querySelectorAll("input");
-var
+var randomMessage = document.querySelector(".message-hidden")
+var image = document.querySelector(".image-hidden")
+
 // variables
 
 var affirmations = [
@@ -26,10 +28,10 @@ var mantras = [
 "Every day is a second chance.",
 "Tell the truth and love everyone.",
 "I am free from sadness.",
-"I am enough."
+"I am enough.",
 "In the beginning it is you, in the middle it is you and in the end it is you.",
 "I love myself.",
-"I am present now."
+"I am present now.",
 "Inhale the future, exhale the past.",
 "This too shall pass.",
 "Yesterday is not today.",
@@ -42,22 +44,18 @@ var mantras = [
 // event listeners
 receiveMessageButton.addEventListener("click", generateMessage);
 
-
-
-
 // functions and event handlers
-
-//create variables for radion buttons and received message button
-//create an event listener for receive messsage button
-// some how link the radio button choice to the event of the clicked receive message button
-// create a function that randomizes the arrays of mantras and affirmations.
-// hide the meditating man
-// return random message
 
 function getRandomMessage(array) {
     return array[Math.floor(Math.random() * array.length)]
 };
 
 function generateMessage() {
-
-}
+  event.preventDefault();
+    if (radioButtons[0].checked) {
+      randomMessage.innerText = getRandomMessage(affirmations);
+    } else if (radioButtons[1].checked) {
+      randomMessage.innerText = getRandomMessage(mantras);
+    }
+      image.classList.add("hidden");
+    };
