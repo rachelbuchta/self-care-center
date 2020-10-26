@@ -1,10 +1,22 @@
 // query selectors
 var receiveMessageButton = document.querySelector("button");
 var radioButtons = document.querySelectorAll("input");
-var randomMessage = document.querySelector(".message-hidden")
-var image = document.querySelector(".image-hidden")
+var randomMessage = document.querySelector(".message-hidden");
+var messageImage = document.querySelector(".image-hidden");
+var favoriteButton = document.querySelector(".favorite-button");
+var viewFavoritesButton = document.querySelector(".view-favorites");
+var mainPageView = document.querySelector(".main-page");
+var favoritesPageView = document.querySelector(".favorites-page");
+var backToMainButton = document.querySelector(".back-to-main")
 
 // variables
+
+// class Message {
+//   contructor(randomMessage) {
+//     this.id = Date.now();
+//     this.message = randomMessage;
+//   }
+// }
 
 var affirmations = [
 "I forgive myself and set myself free.",
@@ -40,9 +52,14 @@ var mantras = [
 "I am the sky, the rest is weather."
 ];
 
+var favorites = [];
+var currentMessage;
 
 // event listeners
 receiveMessageButton.addEventListener("click", generateMessage);
+favoriteButton.addEventListener("click", favoriteMessage);
+viewFavoritesButton.addEventListener("click", viewFavoritesPage);
+backToMainButton.addEventListener("click", backToMain);
 
 // functions and event handlers
 
@@ -57,5 +74,43 @@ function generateMessage() {
     } else if (radioButtons[1].checked) {
       randomMessage.innerText = getRandomMessage(mantras);
     }
-      image.classList.add("hidden");
+      // currentMessage = new Message(randomMessage.innerText);
+      messageImage.classList.add("hidden");
     };
+
+function favoriteMessage() {
+    favorites.push(randomMessage.innerText);
+    console.log(favorites);
+};
+console.log(favoriteMessage);
+console.log(favorites);
+console.log(favorites[4]);
+
+function viewFavoritesPage() {
+  mainPageView.classList.add("hidden");
+  favoritesPageView.classList.remove("hidden");
+};
+
+function backToMain() {
+  mainPageView.classList.remove("hidden");
+  favoritesPageView.classList.add("hidden");
+}
+
+// favorites function
+//* addd favorite button im html near message viewBox!!
+//  create a querySelector that will grab the favorite button!!
+// create an favoritevariable that starts as an empty array!!
+// create an event listener for favorite button!!
+// write a function that will push that message into the favorires array!!
+// add a view favorites button under message box!!
+// query select that view favorites button!!
+// create an event listener that for view favorites button!!
+// write a function that will hide current page and be directed to a page that displays the favorited messsages!!
+// add a go back to main button on this favorites page!!
+// query select that go back to main button!!
+// addd an event listener for the go back to main buttton!!
+// write a function that hide that favoirtes page and display main page!!
+// add a delete button
+// query select delete buttton
+// create an event listener for delete a mesage button
+// write a function that will delete selected message- this will proably have a for loop [i] and use splice
