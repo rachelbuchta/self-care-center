@@ -23,21 +23,17 @@ button {
   color: #ffffff;
   border: none;
   font-size: 1em;
-  /* text-align: center; */
   width: 13em;
   height: 2em;
   border-radius: .3em;
   padding: .7%;
 }
 
-input.affirmations {
-  margin: 1%;
-
+input[type="radio" i] {
+  width: 1.4em;
+  height: 2em;
 }
 
-input.mantra {
-
-}
 label {
   font-style: italic;
   font-size: 1.2em;
@@ -45,14 +41,13 @@ label {
 
 label.affirmations {
   justify-content: flex-start;
-  padding-right: 11em;
-  padding-left: .7em;
+  padding-right: 9em;
+  padding-left: 1.1em;
 }
 
 label.mantra {
   justify-content: flex-end;
-  padding-left: .7em;
-
+  padding-left: 1.1em;
 }
 
 .hidden {
@@ -68,35 +63,25 @@ label.mantra {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(#134d71);
   padding: 5%;
+  padding-bottom: 5%;
   font-size: 1.2em;
   color: #ffffff;
   font-weight: bold;
 }
 
-
- p {
+p {
   flex-direction: column;
   display: flex;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 0%;
+  margin-bottom: 1.5%;
   font-weight: bold;
   font-size: 1.4em;
   padding: 1%;
 }
 
-/* .users-choice {
-  display: flex;
-  flex-direction: column;
-
-} */
-.form-box {
-  display: flex;
-  flex-direction: column;
-}
- form {
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,10 +89,10 @@ label.mantra {
   width: 36em;
   padding: .7em;
   padding-bottom: .5em;
-  margin-bottom: 9%;
+  margin-bottom: 7%;
+  margin-top: -2%;
   border-radius: .5em;
 }
-
 
 span {
   display: flex;
@@ -118,29 +103,26 @@ span {
 .receive-message {
   display: flex;
   justify-content: center;
-
 }
-
 
 .message-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 49em;
+  width: 51em;
   height: 9em;
   padding: .5%;
   background-color: #ffffff;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
   border-radius: .5em;
   font-size: 1em;
 }
 
 .image-hidden {
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   display: flex;
-
 }
 
 .message-hidden {
@@ -167,5 +149,39 @@ span {
 .favorites-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 0%
+  padding: 1%;
+  padding-bottom: 2%;
+  font-size: 1.9em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.saved-messages {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  margin-top: -5%;
+}
+
+.delete-message {
+  margin-right: 10%;
+}
+
+ul {
+  list-style-type: square;
+  color: white;
+}
+
+.delete {
+  margin-right: 2%;
 }
